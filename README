@@ -1,0 +1,41 @@
+WHAT IS IT?
+
+Bene LinkTracker is a small ExpressionEngine 2 plugin that simplifies the process of turning links into Google Analytics traceable events.  
+
+HOW TO USE?
+
+1. Use the latest Google Analytics javascript
+-----------------------------------------------------
+First of all make sure you use the latest version of the Google Analytics tracking javascript that allows asynchronic event tracking, for more details see:
+http://code.google.com/apis/analytics/docs/tracking/asyncTracking.html
+You can easily find the code required for your website in your Google Analytics profile.  Remember that you should place the javascript on every page that
+needs to track events.  It should be positioned just before the closing </head> - tag
+
+Please note that Google Analytics tracks about 500 events per session, so if users generate more events you track than they get ignored
+
+2. Tag your links so they get tracked as events
+-----------------------------------------------------
+This add-ons is here to help you with creating more complex HTML links tags without having to deal with the complexity of it.  Features that are supported:
+- Standard Parameters
+    - url = the url to link to
+    - target = the target of the link (values: blank, parent, self, top or [framename])
+    - text = the name of the link
+    - title = the title of the link (shown on hover over)
+- Google Analytics Goal tracking:
+    - track = (default is "yes").  If parameter not explicitely set to "No", Google Analytics code will be added to track the click on this link as goal,
+                    url of the link will be used as name of the goal.
+    - label = Optionally you can specify a label of the event that needs to appear e.g. label='Click on www.expressionengine.com link'.  If not set a standard set of rules will be used
+                    to determine the label. The logic has the ability to differentiate link to own site, links to external site, links to email and others
+
+
+3. View your reports in your Google Analytics account
+-----------------------------------------------------
+After a day of usage you can track the results in your Google Analytics account under 'Content' > 'Events'
+
+EXAMPLE:
+
+{exp:bene_linktracker url="http://www.bene.be" target='_blank' track='yes' text='Visit us' title="Go to our website"}
+
+RELEASE NOTES:
+
+1.0 - Initial Release.
