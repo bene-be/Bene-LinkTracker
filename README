@@ -34,7 +34,7 @@ After a day of usage you can track the results in your Google Analytics account 
 
 EXAMPLE:
 
-{exp:bene_linktracker url="http://www.bene.be" target='_blank' track='yes' text='Visit us' title="Go to our website"}
+{exp:bene_linktracker url='http://www.bene.be' target='_blank' track='yes' text='Visit us' title='Go to our website'}
 
 RELEASE NOTES:
 
